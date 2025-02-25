@@ -1,4 +1,4 @@
-package org.example.Singleton;
+package org.example.singleton;
 
 
 //this is example of lazy initialization as in normal we already have object in this we create object only when needed

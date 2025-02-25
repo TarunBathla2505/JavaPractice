@@ -1,4 +1,4 @@
-package org.example.Singleton;
+package org.example.singleton;
 
 // good example for lazyinitialization using double checked locking and synchronized keyword
 // still a little slow as synchronization happens with locking and unlocking

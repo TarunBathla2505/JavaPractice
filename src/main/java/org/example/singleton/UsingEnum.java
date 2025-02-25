@@ -1,4 +1,4 @@
-package org.example.Singleton;
+package org.example.singleton;
 
 public enum UsingEnum {
     INSTANCE;
