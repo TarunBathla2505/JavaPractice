@@ -1,0 +1,69 @@
+annotation is nothing just used to add meta data to our java code
+we use these annotation by reflections to perform actions if we want to
+
+types of annotations
+
+1. Pre-Defined Annotations ( these are generally used while creating your own annotations )
+    I. Used On Annotations ( Below Annotations are use on other Annotations)
+        a. @Target
+            - using this we limit annotations working over methods, class, or field and more
+        b. @Retention
+            - how the annotation will be stored in java
+            - SOURCE will be discarded by compiler no annotation will be their in .class
+            - CLASS will be recorded in .class file but ignored by JVM i.e we cannot use it over run time
+            - RUNTIME will be recorded in .class file and can be used in run time too
+        c. @Documented
+            - while generated java docs annotations are ignored but if you want to add documentation for it we can use this annotation
+        d. @Inherited
+            - by default annotation on parent class not work on child if you want we have to put inherited
+        e. @Repeatable
+            - allow us to use same annotation more than 1 time
+
+    II. Used on Java Code ( Below Annotations are directly used on Java Code)
+        a. @Deprecated
+            - usage of deprecated class or methods or fields, shows you compile time warning
+            - Deprecation means, no further improvement is happening on this and use new alternative method or field instead
+            - Can be used over : Constructor, Fields, Local Variable, Method, Package, Parameter, Type(class, interface,enum)
+        b. @Override
+            - used over methods which we override while using inheritance
+        c. @SupressWarnings
+            - used to supress warning
+        d. @FunctionalInterface
+            - Used over interface having only one abstract method
+        e. @SafeVarargs
+            - Used to supress "Heap Pollution Warnings"
+            - Used over methods or constructors having variable arguments
+            - method should be either static or final(not to be overriden)
+            - in java9 we can use it over private methods too
+
+2. Custom Annotations / User Defined
+
+    @{Our Custom Name}
+
+    1. creating annotation with empty body
+
+        @Target(ElementType.TYPE)
+        @Inherited
+        @Retention(RetentionPolicy.RUNTIME)
+        public @interface MyOwnAnnotation {
+        }
+
+    2. creating annotation with methods (more like a field no return type no parameter)
+        return type is restricted to primitive, class, string, annotations and array of these
+
+        @Target(ElementType.TYPE)
+        @Repeatable(Categories.class)  // provide container to store multiple entries
+        @Retention(RetentionPolicy.RUNTIME)
+        public @interface Category {
+
+            String name();
+        }
+
+
+        @Target(ElementType.TYPE)
+                @Repeatable(Categories.class)  // provide container to store multiple entries
+                @Retention(RetentionPolicy.RUNTIME)
+                public @interface Category {
+
+                    String name() default "hello";
+                }
