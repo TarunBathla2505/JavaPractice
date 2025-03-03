@@ -1,0 +1,32 @@
+It is an event which occur during execution of program
+It will disrupt your program normal flow
+It create the exception object which contain info about error like
+    a. exception type and message
+    b. stack trace
+Runtime system use this exception object and find class which can handle it
+
+
+exception hierarchy
+
+                                Object
+                                |
+                    |--------Throwable----------|
+                    |                           |               |---> Unchecked/Runtime
+           |------Error-----|               Exception-----------|
+           |                |                                   |---> Checked/CompileTime
+     OutOfMemoryError   StackOverFlow
+
+
+Uncheck/ Runtime Exception
+1. Class Cast Exception
+2. Arithmetic Exception
+3. IndexOutOfBound Exception
+4. Null Pointer Exception
+5. Illegal Argument Exception
+
+
+Checked Exception
+1. ClassNotFound Exception
+2. Interrupted Exception
+3. IO Exception
+4. SQL Exception
