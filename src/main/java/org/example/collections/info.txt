@@ -1,0 +1,10 @@
+1. fix the issue for having different methods for adding and getting values from different data structure
+
+
+Collection:
+    1. represents a group of objects its an interface which provides methods to work on group of objects.
+    2. methods -> size, isEmpty, contains, toArray, add, remove, addAll, removeAll, clear, equals, stream and parallelStream, iterator
+
+Collections:
+    1. utility class which provides static methods, which are used to operate over collection like swapping, searching, reverse, copy etc.
+    2. methods -> sort, binarySearch, get, reverse, shuffle, swap, copy, min, max, rotate, unmodifiableCollection etc.
