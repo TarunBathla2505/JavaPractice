@@ -8,3 +8,10 @@ Collection:
 Collections:
     1. utility class which provides static methods, which are used to operate over collection like swapping, searching, reverse, copy etc.
     2. methods -> sort, binarySearch, get, reverse, shuffle, swap, copy, min, max, rotate, unmodifiableCollection etc.
+
+Comparator and Comparable both provides a way to sort the collections of object.
+
+Comparator
+    1. functional interface
+    2. method ->
+        int compare(T obj1,T obj2)
