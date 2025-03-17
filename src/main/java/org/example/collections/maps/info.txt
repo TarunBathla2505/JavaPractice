@@ -1,0 +1,12 @@
+* Map -> HashMap, HashTable, LinkedHashMap, TreeMap
+
+methods -> size, isEmpty, containsKey, containsValue, get, put, remove, putAll, putIfAbsent, values, keySet
+
+* HashTable is synchronised version of hashmap and it is thread safe
+hashtable does not save null key or null value
+
+
+* LinkedHashMap is similar to HashMap but it maintains insertion order
+also it can help us maintain the access order
+
+it used double linked list
