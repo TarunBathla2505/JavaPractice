@@ -1,0 +1,6 @@
+stream can be considered as pipeline
+
+to work with stream there are 3 steps
+create a stream
+intermediate func -> sort,map,filter (lazy in nature)
+terminal operaion -> collect,reduce (close the stream and only one can be used)
